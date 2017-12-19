@@ -10,5 +10,12 @@ export class ProductController {
             position: "top left",
             className: "info"
         });
+        this.data.countProducts--;
+        console.log(this.data);
+    }
+
+    getAvailabeProductCount() {
+        let productInCart = this.cartService.cart.groupedProducts.find(group => group.product.id == this.data.id);
+        return productInCart ? this.data.productCount - productInCart.count : this.data.productCount;
     }
 }

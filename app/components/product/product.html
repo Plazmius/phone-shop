@@ -10,8 +10,8 @@
         <p>Rate: {{$ctrl.data.productRate}}</p>
         <p>Price: {{$ctrl.data.priceUAH}} ₴</p>
         <p style="text-align: center">
-            <button class="btn" style="min-width: 15em;" value="{{$ctrl.data.id}}" ng-click="$ctrl.buy()">   
-                Buy now
+            <button class="btn" ng-disabled="$ctrl.data.countProducts <= 0" ng-class="$ctrl.data.countProducts > 0 ? 'btn-success' : 'btn-danger'" style="min-width: 15em;" value="{{$ctrl.data.id}}" ng-click="$ctrl.buy()">   
+                {{$ctrl.data.countProducts > 0 ? "Buy now" : "Out of stock"}}
             </button>
         </p>
     </div>

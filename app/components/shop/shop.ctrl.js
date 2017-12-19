@@ -8,6 +8,7 @@ export class ShopController {
             .then((response) => { 
                 $scope.products = response.data.map(product => {
                     product.priceUAH = parseFloat(product.priceUAH);
+                    product.countProducts = parseInt(product.countProducts);
                     return product;
                 });
             });

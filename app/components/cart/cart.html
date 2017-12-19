@@ -1,6 +1,6 @@
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-        
+
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
@@ -58,8 +58,10 @@
                             <span class="help-block" ng-show="!form.email.$error.required && form.email.$invalid">Please, insert correct email</span>
                         </div>
 
-                        <label>Payment type</label>
-                        <select class="form-control" ng-model="paymentType" ng-options="pType for pType in paymentTypes"></select>
+                        <div class="form-group" ng-class="!form.email.$error.required && form.email.$invalid ? 'has-error' : ''">
+                            <label>Payment type</label>
+                            <select class="form-control" ng-model="paymentType" ng-options="pType for pType in paymentTypes"></select>
+                        </div>
                         <div ng-show="paymentType == 'Card'" class="">
 
                             <div class="form-group" ng-class="!form.cardNumber.$error.required && form.cardNumber.$invalid ? 'has-error' : ''">
