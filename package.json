@@ -1,0 +1,15 @@
+{
+  "name": "e-shop",
+  "version": "1.0.0",
+  "description": "phones e-shop",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "dev": "lite-server"
+  },
+  "author": "Artem Melnychenko",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

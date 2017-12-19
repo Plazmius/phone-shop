@@ -1,0 +1,18 @@
+<div class="" style="padding: 1em">
+    <div style="border: 1px solid #cdd6cf; padding: 1em; border-radius: 1em">
+        <h3 style="text-align: center">{{$ctrl.data.productName}}</h3>
+        <p style="text-align: center">
+            <img class="product-image" src="{{IMAGE_URL}}/{{$ctrl.data.id}}.jpg">
+        </p>
+        <p>Brand: {{$ctrl.data.brandName}}</p>
+        <p>Operation System: {{$ctrl.data.operationSystem}}</p>
+        <p>Number of SIM cards: {{$ctrl.data.numSimCard}}</p>
+        <p>Rate: {{$ctrl.data.productRate}}</p>
+        <p>Price: {{$ctrl.data.priceUAH}} ₴</p>
+        <p style="text-align: center">
+            <button class="btn" style="min-width: 15em;" value="{{$ctrl.data.id}}" ng-click="$ctrl.buy()">   
+                Buy now
+            </button>
+        </p>
+    </div>
+</div>

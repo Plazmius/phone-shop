@@ -1,0 +1,9 @@
+.products-container {
+    margin: 0 auto;
+}
+
+.product-item {
+    display: inline-block;
+    min-width: 300px;
+    width: 25%;
+}

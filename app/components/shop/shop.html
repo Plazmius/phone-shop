@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">E-Shop</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a id="cart-link" href="#" data-toggle="modal" data-target="#myModal">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    Cart
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<cart></cart>
+<div class="products-container">
+    <product class="product-item" data="product" ng-repeat="product in products"></product>
+</div>

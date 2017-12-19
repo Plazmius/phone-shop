@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="e-shop">
+
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/app/app.css" />
+    <link rel="stylesheet" href="libs/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/assets/owl.theme.default.min.css">
+
+    <!-- Angular App -->
+    <script src="angular.min.js"></script>
+    <script type="module" src="./app/app.js"></script>
+    <script type="module" src="./app/components/product/product.component.js"></script>
+    <script type="module" src="./app/components/shop/shop.component.js"></script>
+    <script type="module" src="./app/components/cart/cart.component.js"></script>
+
+    <!-- Libs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/libs/notify/notify.min.js"></script>
+    <script src="/libs/elevatezoom/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script src="/libs/sticky/jquery.sticky.js"></script>
+    <script src="/libs/owl-carousel/owl.carousel.min.js"></script>
+</head>
+
+<body>
+    <shop></shop>
+       
+    <script>
+        $(document).ready(function () {
+            $("nav").sticky({ topSpacing: 0 });            
+        }); 
+    </script>
+</body>
+
+</html>
