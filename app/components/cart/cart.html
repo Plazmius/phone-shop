@@ -33,58 +33,7 @@
                         </tr>
                     </tfoot>
                 </table>
-                <div class="form-group" ng-show="isConfirmed">
-                    <form name="form" novalidate ng-submit="sendOrder(order)">
-                        <div class="form-group" ng-class="!form.name.$error.required && form.name.$invalid ? 'has-error' : ''">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" ng-model="order.name" ng-pattern="'^[A-Za-z]*$'" required />
-                            <span class="help-block" ng-show="!form.name.$error.required && form.name.$invalid">Please, insert correct name</span>
-                        </div>
-                        <div class="form-group" ng-class="!form.surname.$error.required && form.surname.$invalid ? 'has-error' : ''">
-                            <label for="surname">Surname</label>
-                            <input class="form-control" id="surname" type="text" name="surname" ng-model="order.surname" ng-pattern="'^[A-Za-z]*$'" required
-                            />
-                            <span class="help-block" ng-show="!form.surname.$error.required && form.surname.$invalid">Please, insert correct surname</span>
-                        </div>
-                        <div class="form-group" ng-class="!form.phone.$error.required && form.phone.$invalid ? 'has-error' : ''">
-                            <label for="phone">Mobile phone</label>
-                            <small>e.g. 0500001122</small>
-                            <input class="form-control" id="phone" name="phone" type="text" ng-model="order.phone" ng-pattern="'^[0-9]{10}$'" required/>
-                            <span class="help-block" ng-show="!form.phone.$error.required && form.phone.$invalid">Please, insert correct phone number</span>
-                        </div>
-                        <div class="form-group" ng-class="!form.email.$error.required && form.email.$invalid ? 'has-error' : ''">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email" name="email" ng-model="order.email" ng-pattern="emailFormat" required/>
-                            <span class="help-block" ng-show="!form.email.$error.required && form.email.$invalid">Please, insert correct email</span>
-                        </div>
-
-                        <div class="form-group" ng-class="!form.email.$error.required && form.email.$invalid ? 'has-error' : ''">
-                            <label>Payment type</label>
-                            <select class="form-control" ng-model="paymentType" ng-options="pType for pType in paymentTypes"></select>
-                        </div>
-                        <div ng-show="paymentType == 'Card'" class="">
-
-                            <div class="form-group" ng-class="!form.cardNumber.$error.required && form.cardNumber.$invalid ? 'has-error' : ''">
-                                <label for="cardNumber">Card number</label>
-                                <input type="text" class="form-control" id="cardNumber" name="cardNumber" ng-model="order.cardNumber" ng-pattern="'^[0-9]{16}$'"
-                                    required/>
-                                <span class="help-block" ng-show="!form.name.$error.required && form.cardNumber.$invalid">Please, insert correct card number</span>
-                            </div>
-                            <div class="form-group" ng-class="!form.cardDate.$error.required && form.cardDate.$invalid ? 'has-error' : ''">
-                                <label for="cardDate">To date</label>
-                                <input type="text" class="form-control" id="cardDate" name="cardDate" ng-model="order.cardDate" ng-pattern="'^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$'"
-                                    required/>
-                                <span class="help-block" ng-show="!form.cardDate.$error.required && form.cardDate.$invalid">Please, insert correct card duedate</span>
-                            </div>
-                            <div class="form-group" ng-class="!form.cardCVV.$error.required && form.cardCVV.$invalid ? 'has-error' : ''">
-                                <label for="cardCVV">CVV</label>
-                                <input type="password" class="form-control" id="cardCVV" name="cardCVV" ng-model="order.cardCVV" ng-pattern="'^[0-9]{3}$'"
-                                    required/>
-                                <span class="help-block" ng-show="!form.cardCVV.$error.required && form.cardCVV.$invalid">Please, insert correct CVV code</span>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <order form="form" ng-show="isConfirmed"></order>
             </div>
             <div class="modal-footer">
                 <button type="button" ng-show="getTotal() > 0" class="btn" ng-class="isConfirmed ? 'btn-primary' : 'btn-default'" ng-click="isConfirmed = true">{{isConfirmed ? "Send" : "Confirm"}}</button>
