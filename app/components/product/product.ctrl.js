@@ -10,7 +10,6 @@ export class ProductController {
             position: "top left",
             className: "info"
         });
-        this.data.countProducts--;
         console.log(this.data);
     }
 

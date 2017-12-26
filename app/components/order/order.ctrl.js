@@ -5,9 +5,8 @@ export class OrderController {
         $scope.validateName = (name, $event) => {
         };
 
-        $("#cardNumber").mask("9999-9999-9999-9999");
-        $("#cardDate").mask("99/9999");
-        $("#cardCVV").mask("999");
-        $("#phone").mask("(999)-999-99-99");
+        // $("#cardNumber").mask("9999-9999-9999-9999");
+        // $("#cardDate").mask("99/9999");
+        // $("#phone").mask("(999)-999-99-99");
     }
 }

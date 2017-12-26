@@ -5,6 +5,6 @@ angular.module("e-shop")
         templateUrl: "/app/components/order/order.html",
         controller: OrderController,
         bindings: {
-            form: "="
+            data: '='
         }
     })
