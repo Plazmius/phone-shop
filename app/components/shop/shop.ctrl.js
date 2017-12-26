@@ -4,5 +4,6 @@ export class ShopController {
         // this.$http = $http;
 
         $scope.store = productService.store;
+        
     }
 }

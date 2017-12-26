@@ -17,24 +17,25 @@
     <script type="module" src="./app/components/shop/shop.component.js"></script>
     <script type="module" src="./app/components/cart/cart.component.js"></script>
     <script type="module" src="./app/components/order/order.component.js"></script>
+    <script type="module" src="./app/directives/zoom-product.js"></script>
 
     <!-- Libs -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" integrity="sha256-ihAoc6M/JPfrIiIeayPE9xjin4UWjsx2mjW/rtmxLM4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/libs/notify/notify.min.js"></script>
-    <script src="/libs/elevatezoom/jquery.elevateZoom-3.0.8.min.js"></script>
     <script src="/libs/sticky/jquery.sticky.js"></script>
-    <script src="/libs/maskedinput/jquery.maskedinput.min.js"></script>
-    <script src="/libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/libs/zoomsl/zoomsl-3.0.js"></script>
 </head>
 
 <body>
     <shop></shop>
-       
+
     <script>
         $(document).ready(function () {
-            $("nav").sticky({ topSpacing: 0 });            
-        }); 
+            $("nav").sticky({ topSpacing: 0 });
+            
+        });
     </script>
 </body>
 
